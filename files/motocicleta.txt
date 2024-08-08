@@ -1,0 +1,2 @@
+Yamaha;Tracer GT;2023;2023;Sporting Touring;65000;847;Corrente;On Road
+Honda;CBR;2023;2023;Super Sport;190000;1000;Corrente;On Road
