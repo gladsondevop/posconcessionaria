@@ -9,6 +9,7 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
 import br.edu.infnet.concessionaria.model.domain.Automovel;
+import br.edu.infnet.concessionaria.model.domain.Concessionaria;
 import br.edu.infnet.concessionaria.model.service.AutomovelService;
 
 @Component
@@ -39,6 +40,10 @@ public class AutomovelLoader implements ApplicationRunner {
 			automovel.setMotorizacao(campos[7]);
 			automovel.setCapacidadePassageiro(Integer.valueOf(campos[8]));
 			automovel.setCapacidadeCarga(Integer.valueOf(campos[9]));
+			
+			Concessionaria concessionaria = new Concessionaria();
+			concessionaria.setId(Integer.valueOf(campos[10]));
+			automovel.setConcessionaria(concessionaria);
 
 			automovelService.incluir(automovel);
 			

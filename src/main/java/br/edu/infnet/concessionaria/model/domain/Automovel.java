@@ -1,5 +1,12 @@
 package br.edu.infnet.concessionaria.model.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import br.edu.infnet.concessionaria.model.dto.VeiculoDTO;
+
+@Entity
+@Table
 public class Automovel extends Veiculo {
 	
 	private boolean utilitario;
@@ -39,6 +46,23 @@ public class Automovel extends Veiculo {
 	}
 	public void setCapacidadeCarga(int capacidadeCarga) {
 		this.capacidadeCarga = capacidadeCarga;
+	}
+	
+	public Automovel dtoToMotocicleta(VeiculoDTO dto) {
+		this.setId(dto.getId());
+		this.setMarca(dto.getMarca());
+		this.setModelo(dto.getModelo());
+		this.setAnoFabricacao(dto.getAnoFabricacao());
+		this.setAnoModelo(dto.getAnoModelo());
+		this.setDescricao(dto.getDescricao());
+		this.setValor(dto.getValor());
+		this.setConcessionaria(dto.getConcessionaria());
+		this.setUtilitario(dto.isUtilitario());
+		this.setMotorizacao(dto.getMotorizacao());
+		this.setCapacidadePassageiro(dto.getCapacidadePassageiro());
+		this.setCapacidadeCarga(dto.getCapacidadeCarga());
+		
+		return this;
 	}
 
 }

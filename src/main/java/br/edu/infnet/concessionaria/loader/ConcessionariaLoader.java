@@ -6,6 +6,7 @@ import java.io.FileReader;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import br.edu.infnet.concessionaria.model.domain.Automovel;
@@ -14,11 +15,12 @@ import br.edu.infnet.concessionaria.model.domain.Motocicleta;
 import br.edu.infnet.concessionaria.model.service.ConcessionariaService;
 
 @Component
+@Order(1)
 public class ConcessionariaLoader implements ApplicationRunner {
 	
 	@Autowired
 	private ConcessionariaService concessionariaService;
-
+	
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
 		
@@ -39,10 +41,9 @@ public class ConcessionariaLoader implements ApplicationRunner {
 				case "C":
 					concessionaria = new Concessionaria();
 					concessionaria.setNome(campos[1]);
-					concessionaria.setSede(null);
 					concessionaria.setAtiva(Boolean.valueOf(campos[2]));
-					
-					concessionariaService.incluir(concessionaria);
+					concessionaria.setCep(campos[3]);
+					concessionariaService.salvar(concessionaria);
 					
 					break;
 	

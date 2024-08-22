@@ -8,6 +8,7 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
+import br.edu.infnet.concessionaria.model.domain.Concessionaria;
 import br.edu.infnet.concessionaria.model.domain.Motocicleta;
 import br.edu.infnet.concessionaria.model.service.MotocicletaService;
 
@@ -38,6 +39,10 @@ public class MotocicletaLoader implements ApplicationRunner{
 			motocicleta.setCilindrada(Integer.valueOf(campos[6]));
 			motocicleta.setTransmissao(campos[7]);
 			motocicleta.setTipoTerreno(campos[8]);
+			
+			Concessionaria concessionaria = new Concessionaria();
+			concessionaria.setId(Integer.valueOf(campos[9]));
+			motocicleta.setConcessionaria(concessionaria);
 			
 			motocicletaService.incluir(motocicleta);
 			

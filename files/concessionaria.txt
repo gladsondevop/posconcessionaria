@@ -1,6 +1,6 @@
-C;Batcar Multimarcas;true
+C;Batcar Multimarcas;true;72465370
 A;Audi;A3;2023;2024;Cedã de luxo;150000;false;2.0 turbo;5;5000
 M;Yamaha;Tracer GT;2023;2023;Sporting Touring;65000;847;Corrente;On Road
-C;Gamacar;true
+C;Gamacar;true;71200020
 A;GM;Silverado;2010;2010;Pick-up;250000;true;3.0 turbo diesel;3;10000
 M;Honda;CBR;2023;2023;Super Sport;190000;1000;Corrente;On Road

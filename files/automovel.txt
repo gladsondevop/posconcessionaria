@@ -1,2 +1,2 @@
-Audi;A3;2023;2024;Cedã de luxo;150000;false;2.0 turbo;5;5000
-GM;Silverado;2010;2010;Pick-up;250000;true;3.0 turbo diesel;3;10000
+Audi;A3;2023;2024;Cedã de luxo;150000;false;2.0 turbo;5;5000;1
+GM;Silverado;2015;2015;Pick-up;250000;true;3.0 turbo diesel;3;10000;2
