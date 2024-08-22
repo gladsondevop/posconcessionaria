@@ -1,0 +1,266 @@
+{
+	"info": {
+		"_postman_id": "3736c678-c02b-4dfe-9d0b-94f2025fbe28",
+		"name": "Pos-Concessionaria",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1483967",
+		"_collection_link": "https://solar-rocket-235451.postman.co/workspace/SESC-DF~21a448bd-7c94-40ba-8a35-c280698b341d/collection/1483967-3736c678-c02b-4dfe-9d0b-94f2025fbe28?action=share&source=collection_link&creator=1483967"
+	},
+	"item": [
+		{
+			"name": "Concessionaria",
+			"item": [
+				{
+					"name": "Salvar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Carbritus\",\r\n    \"ativa\": true,\r\n    \"cep\": \"71200020\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/concessionaria/salvar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"concessionaria",
+								"salvar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 4,\r\n    \"nome\": \"Carbrittus\",\r\n    \"ativa\": false,\r\n    \"cep\": \"71200020\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/concessionaria/atualizar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"concessionaria",
+								"atualizar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Excluir",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/concessionaria/excluir",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"concessionaria",
+								"excluir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/concessionaria/listar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"concessionaria",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter-Por-Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/concessionaria/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"concessionaria",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter-Veiculos-Por-IdConcessionaria",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/concessionaria/2/obter-veiculos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"concessionaria",
+								"2",
+								"obter-veiculos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Veículos",
+			"item": [
+				{
+					"name": "Salvar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tipoVeiculo\": \"M\",\r\n    \"marca\": \"Yamaha\",\r\n    \"modelo\": \"Tracer 900 GT\",\r\n    \"anoFabricacao\": 2023,\r\n    \"anoModelo\": 2023,\r\n    \"descricao\": \"Sporting Touring\",\r\n    \"valor\": 65000.0,\r\n    \"concessionaria\": {\r\n        \"id\": 2\r\n    },\r\n    \"cilindrada\": 847,\r\n    \"transmissao\": \"Corrente\",\r\n    \"tipoTerreno\": \"On Road\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/veiculo/salvar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"veiculo",
+								"salvar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tipoVeiculo\": \"M\",\r\n    \"id\": 5,\r\n    \"marca\": \"Yamaha\",\r\n    \"modelo\": \"MT 09\",\r\n    \"anoFabricacao\": 2023,\r\n    \"anoModelo\": 2023,\r\n    \"descricao\": \"Naked\",\r\n    \"valor\": 50000.0,\r\n    \"concessionaria\": {\r\n        \"id\": 1\r\n    },\r\n    \"cilindrada\": 847,\r\n    \"transmissao\": \"Corrente\",\r\n    \"tipoTerreno\": \"On Road\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/veiculo/atualizar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"veiculo",
+								"atualizar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Excluir",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/veiculo/atualizar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"veiculo",
+								"atualizar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/concessionaria/listar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"concessionaria",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
